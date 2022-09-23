@@ -1,20 +1,28 @@
-import React, { useRef, useState } from "react";
+import React, { useState, useMemo } from "react";
 import styled from "styled-components";
 import { cardFrontImage } from "../utils/constants";
 
 const Card = ({ item, replaceItems }) => {
   const { src } = item;
+
   const [isAddActive, setIsAddActive] = useState(false);
+  const [handlerCounts, setHandlerCounts] = useState(0);
 
   const cardHandler = (e) => {
-    setIsAddActive(true);
+    // setIsAddActive(true);
+
+    setHandlerCounts((prev)=>prev+1);
+    console.log(handlerCounts);
+
   };
+
+  
 
   return (
     <CubeItem
       onClick={cardHandler}
       className={`cube ${isAddActive ? "active-card" : ""}`}
-      style={{ order: replaceItems(item) }}
+      style={{ order: useMemo(() => replaceItems(item), [item]) }}
     >
       <div className="cube__item front">
         <img src={cardFrontImage} alt="card pictures" />

@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Card from "./Card";
 import { images as cardItems } from "../utils/constants";
@@ -6,9 +6,8 @@ import { images as cardItems } from "../utils/constants";
 const Cards = () => {
   const images = cardItems[0].aviation;
   const imagesClone = [...images];
-  const [handlerCount,setHandlerCount] = useState(0);
   const [data, setData] = useState(images.concat(imagesClone));
-  const [checkedItems,setCheckedItems] = useState([]);
+  const [checkedItems, setCheckedItems] = useState([]);
 
   const getRandomIndex = () => {
     const lengthImagesIndex = [];
@@ -16,11 +15,10 @@ const Cards = () => {
       lengthImagesIndex.push(i);
     }
     let randomIndex =
-      lengthImagesIndex[
-        Math.round(Math.random() * lengthImagesIndex.length )
-      ];
+      lengthImagesIndex[Math.round(Math.random() * lengthImagesIndex.length)];
     return randomIndex;
   };
+
 
   return (
     <Wrapper>
