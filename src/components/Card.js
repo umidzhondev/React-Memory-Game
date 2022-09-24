@@ -17,18 +17,20 @@ const Card = ({item,replaceItems}) => {
   };
 
   return (
-    <CubeItem
-      onClick={cardHandler}
-      className={`cube ${isAddActive ? "active-card" : ""}`}
-      style={{ order: useMemo(() => replaceItems(item), [item]) }}
-    >
-      <CubeItemEnd
-        itemClassName={"front"}
-        src={cardFrontImage}
-        name={"card pictures"}
-      />
-      <CubeItemEnd itemClassName={"back"} src={src} name={"card pictures"} />
-    </CubeItem>
+    // <CubeItem
+    //   onClick={cardHandler}
+    //   className={`cube ${isAddActive ? "active-card" : ""}`}
+    //   style={{ order: useMemo(() => replaceItems(item), [item]) }}
+    // >
+    //   <CubeItemEnd
+    //     itemClassName={"front"}
+    //     src={cardFrontImage}
+    //     name={"card pictures"}
+    //   />
+    //   <CubeItemEnd itemClassName={"back"} src={src} name={"card pictures"} />
+    // </CubeItem>
+
+    <button className="btn" onClick={cardHandler}>{handlerCounts}</button>
     
   );
 };
