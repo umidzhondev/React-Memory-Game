@@ -3,12 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* body {
-    background: #00c6ff;  
-    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff); 
-    background: linear-gradient(to right, #0072ff, #00c6ff); 
-} */
 
 body{
     background-color: #333;
+}
+
+.btn{
+    padding: .375rem .875rem;
+    background-color: rgb(255, 255, 255);
+    color: #333;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
 }
