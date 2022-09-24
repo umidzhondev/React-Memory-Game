@@ -7,7 +7,7 @@ const Cards = () => {
   const images = cardItems[0].aviation;
   const imagesClone = [...images];
   const [data, setData] = useState(images.concat(imagesClone));
-  // const [checkedItems, setCheckedItems] = useState([]);
+  const [checkedItems, setCheckedItems] = useState([]);
 
   const getRandomIndex = () => {
     const lengthImagesIndex = [];
